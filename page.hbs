@@ -1,0 +1,59 @@
+{{!< default}}
+
+{{!-- The comment above "< default" means - insert everything in this file into
+    the {{{body}}} of the default.hbs template, containing the blog header/footer. --}}
+
+{{!-- Everything inside the #post tags pulls data from the post --}}
+
+
+<header class="main-header-post {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+    <nav class="main-nav overlay clearfix">
+        {{#if @blog.navigation}}
+            <a class="menu-button icon-menu" href="#"><span class="menutext">Menu</span></a>
+        {{/if}}
+    </nav>
+    <div class="vertical">
+        <div class="main-header-content innerp">
+        </div>
+    </div>
+    <a class="scroll-down icon-arrow-left" href="#content" data-offset="45"><span class="hidden">Scroll Down</span></a>
+</header>
+
+<main class="content-main-page" role="main">
+    <div class="whole-page-holder">
+<!------------ UNCOMMENT TO DISPLAY PAGE TITLE ------------------>
+<!--            <h1 class="page-title-wide">{{@blog.title}}</h1>-->
+<!------------ UNCOMMENT TO DISPLAY PAGE TITLE ------------------>
+        {{#if @blog.logo}}<a href="{{@blog.url}}"><img class="sitemainlogop" src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+        <article class="postp">
+    {{! Everything inside the #post tags pulls data from the post }}
+            {{#post}}
+
+                <h1 class="post-title">{{{title}}}</h1>
+                <span class="post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time> </span>
+                <section class="post-content">
+                    {{content}}
+                </section>
+                <span class="post-meta">
+                    {{tags prefix="Tags: " separator="  "}}
+                </span>
+                <!--------- Where page scrolls to when arrow is clicked ------------>            
+                <main id="content" class="content" role="main">
+                </main>
+<!--------- Where page scrolls to when arrow is clicked ------------>  
+
+            
+            {{/post}}
+
+        </article>
+    </div>
+   {{!-- The tiny footer at the very bottom --}}
+        
+</main>
+{{#if @blog.description}}
+        <p class="site-desc"><img src="{{@blog.url}}{{@blog.url}}/assets/imgs/desc.png" />{{@blog.description}}</p>
+        {{/if}}
+<footer class="site-footer clearfix">
+            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+        </footer>
+

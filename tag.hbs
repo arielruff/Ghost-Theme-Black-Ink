@@ -1,0 +1,52 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{!-- If we have a tag cover, display that - else blog cover - else nothing --}}
+<header class="main-header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+    <div class="featured-post-tab">
+        {{#get "posts" filter="featured:true" limit="1" as |featured|}}
+            <section class="featured-posts">
+                {{#foreach featured}}
+                    <img class="featured_stub" src="assets/imgs/featured_stub.png" />
+                    <p class="ftxt-fp">Featured post:&nbsp</p>
+                    <p class="ftxt-name"><a href="{{url}}">{{title}}</a></p>
+                {{/foreach}}
+            </section>
+        {{else}}
+            <p class="ftxt-name">No featured posts...</p>
+        {{/get}}
+    </div>
+    
+    <nav class="main-nav overlay clearfix">
+<!----------- DETATCHED LOGO --------------->
+        <!--
+        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+        -->
+<!----------- DETATCHED LOGO --------------->
+        
+        {{#if @blog.navigation}}
+            <a class="menu-button icon-menu" href="#"><span class="menutext" >Menu</span></a>
+        {{/if}}
+    </nav>
+    <div class="vertical">
+        
+    </div>
+    
+    <a class="scroll-down icon-arrow-left" href="#content" data-offset="45"><span class="hidden">Scroll Down</span></a>
+</header>
+
+{{!-- The main content area on the homepage --}}
+<main class="content" role="main">
+    
+    <div class="main-header-content inner"> 
+            {{#tag}}
+                <h3 class="page-title">Tag: {{name}}</h3>
+            {{/tag}}
+        </div>
+    {{#if @blog.logo}}<a href="{{@blog.url}}"><img class="sitemainlogo" src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+    {{!-- The tag below includes the post loop - partials/loop.hbs --}}
+    {{> "loop"}}
+</main>
+<footer class="site-footera clearfix">
+            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+        </footer>

@@ -2,32 +2,32 @@
 a stylish theme by <a href="http://www.arielruff.com">Ariel Ruff</a> for [Ghost](http://github.com/tryghost/ghost/).
 ##Demo Site: [Black Ink](http://www.zerocomposition.com/ "Black Ink")## ***Demo Site No Longer Hosted***
 
-![](https://www.arielruff.com/BIStore/BlackInk_SP_1.jpg)
+![](https://www.arielruff.com/git/blackink/BlackInk_SP_1.jpg)
 
 ----------
 
 
-![](https://www.arielruff.com/BIStore/BlackInk_SP_2.jpg)
+![](https://www.arielruff.com/git/blackink/BlackInk_SP_2.jpg)
 
 ----------
 
 
-![](https://www.arielruff.com/BIStore/BlackInk_SP_3.jpg)
+![](https://www.arielruff.com/git/blackink/BlackInk_SP_3.jpg)
 
 ----------
 
 
-![](https://www.arielruff.com/BIStore/BlackInk_SP_4.jpg)
+![](https://www.arielruff.com/git/blackink/BlackInk_SP_4.jpg)
 
 ----------
 
 
-![](https://www.arielruff.com/BIStore/BlackInk_SP_5.jpg)
+![](https://www.arielruff.com/git/blackink/BlackInk_SP_5.jpg)
 
 ----------
 
 
-![](https://www.arielruff.com/BIStore/BlackInk_SP_7.jpg)
+![](https://www.arielruff.com/git/blackink/BlackInk_SP_7.jpg)
 
 ----------
 
